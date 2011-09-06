@@ -1,0 +1,16 @@
+#summary Roadmap
+
+= Aims of this project =
+
+ * browser-based addressbook & calendar
+ * web frontend to gammu to synchronize with mobile devices
+ * send contacts and dates via email
+ * dial a contact's number on your phone via Bluetooth
+
+=== maybe / maybe not / maybe later ===
+ * maybe implement [http://www.opensync.org/ OpenSync], the successor of MultiSync, see http://de.wikipedia.org/wiki/OpenSync
+ * maybe import contacts from websites
+ * maybe import contacts from a wiki
+ * maybe import contacts from documents
+ * maybe import contacts via email
+ * maybe import contacts from an email account
