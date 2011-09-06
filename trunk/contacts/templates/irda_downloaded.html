@@ -1,0 +1,66 @@
+{% extends 'contacts.html' %}
+
+{% block content %}
+
+<hr/>
+
+<center>
+
+<h2>Found {{ number }} contacts</h2>
+
+<form name=main action=save method=POST>
+<input type=hidden name=number value="{{ number }}"/>
+
+<style>
+	table,td	{
+			border:		1px solid gray;
+			}
+</style>
+
+<table>
+	<tr>
+		<th></th>
+		<th>First Name</th>
+		<th>Family Name</th>
+		<th>Mobile</th>
+		<th>Work</th>
+		<th>General</th>
+		<th>Import as ...</th>
+	</tr>
+{% for contact in contacts %}
+	<tr>
+		<td>
+			<input type=hidden name="id_{{ contact.index }}" value="{{ contact.ID }}"/>
+			<input type=checkbox name="add_{{ contact.ID }}" checked />
+		</td>
+		<td>
+			{{ contact.Firstname }}
+		</td>
+		<td>
+			{{ contact.Familyname }}
+		</td>
+		<td>
+			{{ contact.Mobile }}
+		</td>
+		<td>
+			{{ contact.Work }}
+		</td>
+		<td>
+			{{ contact.General }}
+		</td>
+		<td>
+			<input type=text name="import_as_{{ contact.ID }}" value="{{ contact.Real }}"/>
+		</td>
+	</tr>
+{% endfor %}
+</table>
+<br/>
+<input type=submit value="Import selected Contacts to AddressBook"/>
+
+</form>
+
+</center>
+
+<hr/>
+
+{% endblock %}

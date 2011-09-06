@@ -1,0 +1,32 @@
+{% extends 'contacts.html' %}
+
+{% block content %}
+
+<!-- refresh this page so we can always see the currently found devices in range -->
+<meta http-equiv="refresh" content="3">
+
+<h2>IrDA</h2>
+
+<style>
+	iframe			{
+				border:			none;
+				width:			100%;
+				height:			300px;
+				overflow:		hidden;
+				overflow-y:		scroll;
+				}
+</style>
+
+<iframe src="./IrDA/"></iframe>
+
+<hr/>
+
+<h2>Bluetooth</h2>
+
+<hr/>
+
+<h2>OpenSync</h2>
+
+<hr/>
+
+{% endblock %}
