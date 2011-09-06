@@ -1,0 +1,117 @@
+<html>
+
+<!--
+ http://www.barelyfitz.com/projects/tabber/
+ http://css.maxdesign.com.au/listamatic/horizontal11.htm#
+-->
+
+<style>
+	body	{
+		font-size:	10pt;
+		}
+	table	{
+		border:		none;
+		width:		100%;
+		}
+</style>
+
+<script>
+	function removeAtom(atomid, atomvalue) {
+		if ( confirm("Really remove "+atomvalue+" from {{ firstname }} {{ familyname }} ?") ) {
+			document.location.href = "removeatom?contact={{ id }}&atom="+atomid;
+			}
+		}
+
+	function removeContact() {
+		if ( confirm("Really remove contact {{ firstname }} {{ familyname }} ?") ) {
+			document.location.href = "remove?contact={{ id }}";
+			}
+		}
+
+	function ContactChanged() {
+		document.Contact.submit.style.visibility = "visible";
+		}
+</script>
+
+<body>
+
+<table>
+<tr>
+<td>
+
+<h2>Contact</h2>
+<form name=Contact action="." method=POST>
+<input type=hidden name=Contact value="{{ id }}"/>
+<table cellspacing=0>
+	<tr>
+		<td>First name:</td>
+		<td align=right><input type=text name=Firstname value="{{ firstname }}" onKeyDown="ContactChanged();"/></td>
+	</tr>
+	<tr>
+		<td>Family name:</td>
+		<td align=right><input type=text name=Familyname value="{{ familyname }}" onKeyDown="ContactChanged();"/></td>
+	</tr>
+	<tr>
+		<td>
+			<input type=button value=Delete onClick="removeContact();"/>
+		</td>
+		<td align=right>
+			<input type=submit name=submit value="Save" style="visibility:hidden;"/>
+		</td>
+	</tr>
+</table>
+</form>
+
+<hr/>
+
+<h2>Address:</h2>
+<table>
+{% for address in addresses %}
+	<tr>
+		<td>
+			<input type=button value="X" onClick="removeaddress('{{ address.id }}');"/>
+		</td>
+		<td>
+			{{ address.street }} {{ address.number }}<br/>
+			{{ address.postal }} {{ address.city }}
+		</td>
+	</tr>
+{% endfor %}
+</table>
+
+</td>
+<td>
+
+<table>
+{% for atom in atoms %}
+	<tr>
+		<td align=left>
+			{{ atom.value }}
+		</td>
+		<td align=right>
+			<input type=button value="X" onClick="removeatom('{{ atom.id }}', '{{ atom.value }}');"/>
+		</td>
+	</tr>
+{% endfor %}
+</table>
+
+<hr/>
+
+<form action=addatom method=POST>
+	<input type=hidden name=contact value="{{ id }}" />
+	<select name=property>
+		<option value=Email>Email</option>
+		<option value=Mobile>Mobile</option>
+		<option value=Landline>Landline</option>
+	</select>:
+	<input type=text class=text name=value />
+	<input type=submit value="add" />
+</form>
+
+</td>
+</tr>
+</table>
+
+</body>
+
+</html>

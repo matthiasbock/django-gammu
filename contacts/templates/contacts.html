@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}">
+
+<html>
+
+<head>
+	<title>Contacts</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<script type="text/javascript" src="static/fader.js"></script>
+</head>
+
+<body>
+
+<style>
+	#Menu			{
+				position:		absolute;
+				top:			8px;
+				left:			8px;
+				font-size:		10pt;
+				}
+	#Menu a			{
+				text-decoration:	none;
+				}
+	#Menu a:hover		{
+				background:		#22aa00;
+				text-decoration:	underline;
+				}
+	#Hoster			{
+				position:		absolute;
+				top:			8px;
+				right:			8px;
+				font-size:		7pt;
+				}
+</style>
+
+<div id=Menu>
+	<a href="/Django/contacts/">Contacts</a> | <a href="/Django/contacts/synchronize">Synchronize</a>
+</div>
+
+<div id=Hoster>
+	<a target="_blank" href="http://django-contacts.googlecode.com/">http://django-contacts.googlecode.com/</a>
+</div>
+
+<br/>
+
+{% block content %}{% endblock %}
+
+</body>
+
+</html>

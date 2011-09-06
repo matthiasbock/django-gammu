@@ -1,0 +1,24 @@
+<html>
+
+<body>
+	<script>
+		function Reload() {
+			document.reload(true);
+			}
+		setTimeout("Reload();", 1500);
+	</script>
+
+	<h3>Hardware</h3>
+	{% for h in hardware %}
+		<b>{{ h.name }}</b>: Address <i>{{ h.address }}</i>
+		<br/>
+	{% endfor %}
+
+	<h3>Remote devices</h3>
+	{% for device in devices %}
+		<b>{{ device.name }}</b>: Address <i>{{ device.address }}</i>, <a href="javascript:parent.location.href='./download?dev={{ device.device }}';">Download contacts</a>
+		<br/>
+	{% endfor %}
+</body>
+
+</html>
