@@ -34,4 +34,4 @@ $ rfcomm connect 0 20:E2:05:DE:66:01 8
 {{{
 echo "ATD 123456789" > /dev/rfcomm0
 }}}
- * now it should dial the number, at least it does on my [SciPhone_i68plus SciPhone]
+ * now it should dial the number
