@@ -12,7 +12,7 @@
    * [i68plus SciPhone i68+]
    * [iPhone]
  * Bluetooth
-   * [Bluetooth Bluetooth in general]
-   * [Python-Bluetooth Bluetooth & Python]
-   * [Bluetooth-Dialing Bluetooth Dialing]
+   * [Bluetooth General]
+   * [Python_Bluetooth Python]
+   * [Bluetooth_Dialing Dialing]
  * [Price]
