@@ -1,0 +1,8 @@
+#summary Dependencies
+
+= Dependencies =
+
+ * iCal (.ics) & vCard (.vcf) import / export: [http://vobject.skyhouseconsulting.com/ python-vobject]
+ * CalDAV server: [http://radicale.org/user_documentation/ python-radicale]
+ * gammu interface: [http://wammu.eu/python-gammu/ python-gammu]
+ * mediawiki import: [http://code.google.com/p/django-mediawiki/ django-mediawiki]
