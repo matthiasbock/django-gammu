@@ -1,6 +1,7 @@
  * [Home]
  * [Features]
  * [Roadmap]
+ * [Formats]
  * [Dependencies]
  * gammu
    * [gammu How it works]
