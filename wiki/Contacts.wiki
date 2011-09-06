@@ -1,0 +1,17 @@
+#summary Contacts
+
+= Django Adressbook Application =
+
+This application (and the associated contact database) are supposed to be served by an apache webserver installation from within a Django framework. Contacts are accessible and synchronized from and with any authorized client on the network as well as via IrDA and Bluetooth.
+
+If you use or like this software, please donate a Dollar/Euro via Paypal to mabo-technik@web.de
+
+Thank you!
+
+----
+
+== Development status ==
+
+Project started 22th of July 2011.
+
+Current status: Under development. Partially ready, but pre-alpha.
