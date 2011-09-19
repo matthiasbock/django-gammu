@@ -1,27 +1,20 @@
 #summary Calendar
 
-= Django Calendar Application =
+= Django Calendar =
 
-This application is intended to run on a server machine, but may also run on localhost.<br/>
-It is accessible from any (mobile) client on the network via a web interface.
+Shows a simple HTML table,
+visualizing your personal Django database baked calendar.
+You can add, edit and remove entries and
+afterwards synchronize everything with your mobile phone.
 
-Synchronization with Android and iPhone will be possible via CalDAV and ICS import / export.
+= Synchronization =
 
-----
-
-== Advantages ==
-
- * completely open source
- * fully customizable
- * no internet access required: also runs inside an intranet or completely offline
- * you can create backups of your calendar
- * data is stored more controllable and secure on your own server
- * your data will not be stolen, in case somebody hacks Google's calendar servers
+Synchronization e.g. with Android and iPhone will be possible via CalDAV and ICS import and export.
 
 ----
 
-== Status ==
+= Status =
 
-Project started 13th of July 2011.
+Calendar subproject started 13th of July 2011.
 
 Under development. No usable results yet.
