@@ -1,7 +1,0 @@
-#summary Features
-
-= Features =
-
- * Platform & OS independent: Web interface
- * IrDA & Bluetooth capabilities
- * [http://de.wikipedia.org/wiki/VCard vCard] & iCal support
