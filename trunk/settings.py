@@ -4,31 +4,21 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Matthias Bock', 'matthias.bock@hu-berlin.de'),
+    ('webmaster', 'webmaster@localhost'),
 )
 
 MANAGERS = ADMINS
 
-from Django.globals import *
-
 DATABASES = {
-   CalendarDB: {
-        'ENGINE':	'django.db.backends.mysql',
-        'NAME':		CalendarDB,
-        'USER': 	'Django',
-        'PASSWORD':	'your Django password',
-        'HOST':		'',
-        'PORT':		'',
-	},
-   ContactsDB: {
-        'ENGINE':	'django.db.backends.mysql',
-        'NAME':		ContactsDB,
-        'USER': 	'Django',
-        'PASSWORD':	'your Django password',
-        'HOST':		'',
-        'PORT':		'',
+	'django-gammu': {
+		'ENGINE':	'django.db.backends.mysql',
+		'NAME':		'django-gammu',
+		'USER': 	'Django',
+		'PASSWORD':	'',
+		'HOST':		'',
+		'PORT':		'',
+		}
 	}
-}
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '2*n=_g9_(1x@%+d$p(+0cr_naa_v8@yt%@j6+-^%cdcowk^e%0'
