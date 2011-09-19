@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 
 from Django.globals import *
-from Django.calendar.models import *
+from Django.gammu.models import *
 
 def index( request ):
 	return HttpResponseRedirect("listing")
