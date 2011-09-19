@@ -1,18 +1,18 @@
  * [Home]
-   * [Features]
-   * [Roadmap]
-   * [Formats]
-   * [Dependencies]
-   * [Price]
- * Subprojects
-   * [Calendar]
-   * [Contacts]
+ * [Roadmap]
+ * [Dependencies]
+ * [Formats Supported formats]
+ * [Calendar]
+ * [Contacts]
+ * [SMS]
  * gammu
-   * [gammu How it works]
+   * [gammu]
+   * [wammu]
  * Bluetooth
-   * [Bluetooth General]
+   * [Bluetooth ... in general]
    * [Bluetooth_Python Python]
    * [Bluetooth_Dialing Dialing]
  * Mobile Phones
    * [i68plus SciPhone i68+]
    * [iPhone]
+ * [Price Price and License]
