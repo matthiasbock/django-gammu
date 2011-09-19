@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}">
+
+<html>
+
+<head>
+	<title>Calendar</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<script type="text/javascript" src="static/fader.js"></script>
+</head>
+
+<body>
+
+<style>
+	body		{
+			overflow: hidden;
+			background-color: white;
+			}
+	div.body	{
+			border:	none;
+			background-color: #7474cf;
+			position: absolute;
+			}
+	#left_top_corner {
+			background-image: url('static/corner_white.png');
+			background-position: left top;
+			background-repeat: no-repeat;
+			top:	0px;
+			left:	0px;
+			width:	10%;
+			height:	10%;
+			}
+	#top_bar	{
+			top:	0px;
+			right:	0px;
+			width:	90%;
+			height:	10%;
+			}
+	#side_bar	{
+			top:	10%;
+			left:	0px;
+			width:	10%;
+			height:	90%;
+			}
+	#content	{
+			background-image: url('static/corner_blue.png');
+			background-position: left top;
+			background-repeat: no-repeat;
+			background-color: white;
+			top:	10%;
+			left:	10%;
+			width:	90%;
+			height:	90%;
+			text-align: center;
+			}
+</style>
+
+<div class=body id=left_top_corner>
+</div>
+
+<div class=body id=top_bar>
+</div>
+
+<div class=body id=side_bar>
+</div>
+
+<div class=body id=content>
+{% block content %}{% endblock %}
+</div>
+
+</body>
+
+</html>

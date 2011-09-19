@@ -12,12 +12,13 @@ urlpatterns = patterns('',
 	(r'^contacts/IrDA/download$',			"Django.contacts.irda.download"),
 	(r'^contacts/static/(?P<path>.*)$',		'django.views.static.serve', {'document_root': '/var/www/Django/contacts/static', 'show_indexes': True}),
 
-	(r'^calendar/$',				"Django.calendar.main.index"),
-	(r'^calendar/listing$',				"Django.calendar.main.listing"),
-	(r'^calendar/week$',				"Django.calendar.main.week"),
-	(r'^calendar/month$',				"Django.calendar.main.month"),
-	(r'^calendar/import/$',				"Django.calendar.import.index"),
-	(r'^calendar/export/$',				"Django.calendar.export.index"),
+	(r'^calendar/$',				"Django.gammu.calendar.index"),
+	(r'^calendar/listing$',				"Django.gammu.calendar.listing"),
+	(r'^calendar/week$',				"Django.gammu.calendar.week"),
+	(r'^calendar/month$',				"Django.gammu.calendar.month"),
+
+	(r'^calendar/import/$',				"Django.gammu.calendar.import.index"),
+	(r'^calendar/export/$',				"Django.gammu.calendar.export.index"),
 	(r'^calendar/static/(?P<path>.*)$',		'django.views.static.serve', {'document_root': '/var/www/Django/calendar/static', 'show_indexes': True}),
 )
 
