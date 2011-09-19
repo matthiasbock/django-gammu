@@ -1,3 +1,15 @@
 #summary Home
 
 = django-gammu =
+
+django-gammu is a Django application controlled from the network via web browser.
+It allows synchronize your mobile phone with the server, which stores
+calendar entries, contacts and messages (SMS) in a database.
+
+Support for multiple users (with login) is planned.
+
+= Main Features =
+
+ * Web Interface -> platform & OS independent
+ * capable of IrDA & Bluetooth
+ * multilpe input and output formats supported: e.g. [http://de.wikipedia.org/wiki/VCard vCard] & [http://de.wikipedia.org/wiki/iCalendar iCal]
