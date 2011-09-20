@@ -1,103 +1,26 @@
-{% extends 'calendar.html' %}
+{% extends 'listwrapper.html' %}
 
-{% block content %}
-
-<style>
-	div		{
-			border:		1px solid black;
-			background-color: white;
-			position:	static;
-			}
-
-	#divListing	{
-			width:		400px;
-			min-height:	300px;
-			max-height:	600px;
-			padding-top:	5px;
-			padding-bottom:	5px;
-			overflow:	scroll;
-			overflow-x:	hidden;
-			}
-	#divListing table {
-			width:		380px;
-			font-size:	8pt;
-			padding:	5px;
-			}
-	#divListing tr.separator	{
-			background-color: gray;
-			}
-	#divListing tr.event	{
-			background-color: white;
-			color:		black;
-			}
-	#divListing tr.event:hover	{
-			background-color: blue;
-			color:		white;
-			}
-	#divListing td.edit {
-			text-align:	left;
-			cursor:		pointer;
-			}
-	#divListing input.singlemenu {
-			background-color: blue;
-			width:		20px;
-			height:		20px;
-			}
-
-	#divSearch	{
-				font-size:	8pt;
-				width:		400px;
-				height:		35px;
-				}
-	#divSearch input {
-				position:	relative;
-				top:		5px;
-				width:		300px;
-				font-size:	8pt;
-				}
-</style>
-
-{% include 'edit.html' %}
-
-<center>
-
-<script>
-	function selectAll() {
-		}
-</script>
-
+{% block 'list' %}
 <div id=divListing>
-<table cellspacing=0>
-{% for day in days %}
-	<tr class=separator>
-		<td> </td>
-		<td align=left colspan=3>{{ day.date|date:"F" }}</td>
-		<td align=right colspan=2>{{ day.date|date:"d.M.Y" }}</td>
-	</tr>
-{% for event in day.events %}
-	<tr class=event id="tr_{{ event.id }}">
-		<td><input type=checkbox id="checkbox_{{ event.id }}" {{ event.selected }}/></td>
-		<td align=right>{{ event.start }}</td>
-		<td>-</td>
-		<td align=left>{{ event.end }}</td>
-		<td class=edit onClick="edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.summary }}</td>
-		<td><input type=button class=singlemenu value=""/></td>
-		
-	</tr>
-{% endfor %}
-{% endfor %}
-	<tr class=event>
-		<td><input type=checkbox onClick="selectAll();"/></td>
-		<td colspan=5> </td>
-	</tr>
-</table>
+	<table cellspacing=0>
+	{% for day in days %}
+		<tr class=separator>
+			<td> </td>
+			<td align=left>{{ day.date|date:"F" }}</td>
+			<td align=right>{{ day.date|date:"d.M.Y" }}</td>
+		</tr>
+		{% for event in day.events %}
+			<tr class=event id="tr_{{ event.id }}">
+				<td>
+					<input type=checkbox id="checkbox_{{ event.id }}" {{ event.selected }}/>
+				</td>
+				<td align=right onClick="edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.start }}</td>
+				<td align=left onClick="edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.end }}</td>
+				<td class=edit onClick="edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.summary }}</td>
+	
+			</tr>
+		{% endfor %}
+	{% endfor %}
+	</table>
 </div>
-
-<br/>
-
-<div id=divSearch>
-	Suche: 
-	<input type=text name=search />
-</div>
-
 {% endblock %}
