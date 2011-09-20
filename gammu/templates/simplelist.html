@@ -4,13 +4,13 @@
 <div id=divListing>
 	<table cellspacing=0>
 		{% for event in Events %}
-		<tr class=event id="tr_{{ event.id }}" onClick="javascript:edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">
+		<tr class=event id="tr_{{ event.id }}">
 			<td width="8%">
 				<input type=checkbox id="checkbox_{{ event.id }}"/>
 			</td>
-			<td width="40%" align=right>{{ event.start|date:'d. M Y H:m' }}</td>
-			<td width="40%" align=left>{{ event.end|date:'d. M Y H:m' }}</td>
-			<td width="12%" align=left>{{ event.summary }}</td>
+			<td width="40%" align=right onClick="javascript:edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.start|date:'d. M Y H:m' }}</td>
+			<td width="40%" align=left onClick="javascript:edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.end|date:'d. M Y H:m' }}</td>
+			<td width="12%" align=left onClick="javascript:edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.summary }}</td>
 		</tr>
 		{% endfor %}
 	</table>
