@@ -8,9 +8,10 @@
  * dial a contact's number on your phone via Bluetooth
 
 === maybe / maybe not / maybe later ===
- * maybe import contacts from websites
- * maybe import contacts from documents
- * maybe import contacts from an email account
- * maybe import contacts via emailing directly to django-gammu
- * maybe import contacts from a wiki
- * maybe implement [http://www.opensync.org/ OpenSync], the successor of MultiSync, see http://de.wikipedia.org/wiki/OpenSync
+ * import contacts from Facebook (and Google+ ?)
+ * import contacts from websites
+ * import contacts from documents
+ * import contacts from an email account
+ * import contacts via emailing directly to django-gammu
+ * import contacts from a wiki
+ * implement [http://www.opensync.org/ OpenSync], the successor of MultiSync, see http://de.wikipedia.org/wiki/OpenSync
