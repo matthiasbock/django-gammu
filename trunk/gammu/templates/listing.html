@@ -25,12 +25,12 @@
 
 	#divListing	{
 			width:		400px;
+			min-height:	300px;
 			max-height:	600px;
 			padding-top:	5px;
 			padding-bottom:	5px;
 			overflow:	scroll;
 			overflow-x:	hidden;
-			visibility:	hidden;
 			}
 	#divListing table {
 			width:		380px;
@@ -52,11 +52,11 @@
 			text-align:	left;
 			cursor:		pointer;
 			}
-	#divListing input.upbutton	{
+	input.upbutton	{
 			width:		380px;
 			height:		20px;
 			}
-	#divListing input.downbutton {
+	input.downbutton {
 			width:		380px;
 			height:		20px;
 			}
@@ -91,35 +91,23 @@
 
 </style>
 
+{% include 'edit.html' %}
+
 <center>
 
 <div id=divSearch>
 	<input type=text name=search />
 </div>
 
+<br/>
+
 <script>
 	function selectAll() {
 		}
-
-	function edit( id, start, end, summary ) {
-		document.getElementById('edit_id').value = id;
-		document.getElementById('edit_start').value = start;
-		document.getElementById('edit_end').value = end;
-		document.getElementById('edit_summary').value = summary;
-		FadeIn('divEdit', 0);
-		}
-
-	function create() {
-		document.getElementById('edit_id').value = 'new';
-		document.getElementById('edit_start').value = start;
-		document.getElementById('edit_end').value = end;
-		document.getElementById('edit_summary').value = summary;
-		FadeIn('divEdit', 0);
-		}
 </script>
 
-<div id=divListing>
 <input type=button class=upbutton />
+<div id=divListing>
 <table cellspacing=0>
 {% for day in days %}
 	<tr class=separator>
@@ -144,13 +132,7 @@
 		<td colspan=5> </td>
 	</tr>
 </table>
-<input type=button class=downbutton />
 </div>
-
-<script>
-	FadeIn('divListing', 0);
-</script>
-
-{% include 'edit.html' %}
+<input type=button class=downbutton />
 
 {% endblock %}
