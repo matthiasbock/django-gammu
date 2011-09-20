@@ -3,7 +3,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 
-from Django.globals import *
+from Django.databases import *
 from Django.gammu.models import *
 
 def index( request ):
@@ -19,3 +19,4 @@ def listing( request ):
 	return render_to_response("listing.html", params)
 
 #http://vobject.skyhouseconsulting.com/usage.html
+

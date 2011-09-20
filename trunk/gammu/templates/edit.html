@@ -1,0 +1,31 @@
+
+<div id=divEdit>
+	<form action=edit method=POST>
+		<input type=hidden name=id id=edit_id value=''/>
+
+		<table>
+			<tr>
+				<td colspan=2 align=right><img src="static/close.png" height=20 /></td>
+			</tr>
+			<tr>
+				<td>Start:</td>
+				<td><input type=text name=start id=edit_start /></td>
+			</tr>
+			<tr>
+				<td>End:</td>
+				<td><input type=text name=end id=edit_end /></td>
+			</tr>
+			<tr>
+				<td>Summary:</td>
+				<td><input type=text name=sumamry id=edit_summary /></td>
+			</tr>
+			<tr>
+				<td colspan=2 align=right>
+					<input type=submit class=button value=Save />
+					<input type=button class=button value=Cancel onClick="FadeOut('divEdit',1);"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+
