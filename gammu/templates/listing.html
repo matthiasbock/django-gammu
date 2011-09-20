@@ -2,25 +2,11 @@
 
 {% block content %}
 
-<br/><br/>
-
 <style>
 	div		{
 			border:		1px solid black;
 			background-color: white;
 			position:	static;
-			}
-
-	#divSearch	{
-			width:		400px;
-			height:		35px;
-			}
-	#divSearch input {
-			position:	relative;
-			top:		5px;
-			width:		390px;
-			font-size:	8pt;
-			text-align:	right;
 			}
 
 	#divListing	{
@@ -52,61 +38,34 @@
 			text-align:	left;
 			cursor:		pointer;
 			}
-	input.upbutton	{
-			width:		380px;
-			height:		20px;
-			}
-	input.downbutton {
-			width:		380px;
-			height:		20px;
-			}
 	#divListing input.singlemenu {
 			background-color: blue;
 			width:		20px;
 			height:		20px;
 			}
 
-	#divEdit	{
-			position:	absolute;
-			top:		150px;
-			left:		400px;
-			opacity:	0;
-			}
-	#divEdit table	{
-			font-size:	8pt;
-			padding:	5px;
-			spacing:	2px;
-			}
-	#divEdit input	{
-			border:		1px solid gray;
-			font-size:	8pt;
-			text-align:	center;
-			width:		250px;
-			}
-	#divEdit input.button	{
-			font-size:	8pt;
-			text-align:	center;
-			width:		80px;
-			}
-
+	#divSearch	{
+				font-size:	8pt;
+				width:		400px;
+				height:		35px;
+				}
+	#divSearch input {
+				position:	relative;
+				top:		5px;
+				width:		300px;
+				font-size:	8pt;
+				}
 </style>
 
 {% include 'edit.html' %}
 
 <center>
 
-<div id=divSearch>
-	<input type=text name=search />
-</div>
-
-<br/>
-
 <script>
 	function selectAll() {
 		}
 </script>
 
-<input type=button class=upbutton />
 <div id=divListing>
 <table cellspacing=0>
 {% for day in days %}
@@ -133,6 +92,12 @@
 	</tr>
 </table>
 </div>
-<input type=button class=downbutton />
+
+<br/>
+
+<div id=divSearch>
+	Suche: 
+	<input type=text name=search />
+</div>
 
 {% endblock %}
