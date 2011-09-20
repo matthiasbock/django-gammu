@@ -1,5 +1,34 @@
+<style>
+	#divEdit		{
+				position:	absolute;
+				top:		150px;
+				left:		400px;
+				opacity:	0;
+				visibility:	hidden;
+				}
+
+	#divEdit table		{
+				font-size:	8pt;
+				padding:	5px;
+				spacing:	2px;
+				}
+
+	#divEdit input		{
+				border:		1px solid gray;
+				font-size:	8pt;
+				text-align:	center;
+				width:		250px;
+				}
+
+	#divEdit input.button	{
+				font-size:	8pt;
+				text-align:	center;
+				width:		80px;
+				}
+</style>
+
 <div id=divEdit>
-	<form action=edit method=POST>
+	<form action=save method=POST>
 		<input type=hidden name=id id=edit_id value=''/>
 
 		<table>
@@ -45,3 +74,4 @@
 		FadeIn('divEdit', 0);
 		}
 </script>
+

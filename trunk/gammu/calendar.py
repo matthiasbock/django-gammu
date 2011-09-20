@@ -7,7 +7,12 @@ from Django.databases import *
 from Django.gammu.models import *
 
 def index( request ):
-	return HttpResponseRedirect("listing")
+	return HttpResponseRedirect("simplelist")
+
+def simplelist( request ):
+	params = {}
+	params["Events"] = Events.objects.using('django-gammu').all()
+	return render_to_response("simplelist.html", params)
 
 def listing( request ):
 	params = {}
@@ -19,4 +24,7 @@ def listing( request ):
 	return render_to_response("listing.html", params)
 
 #http://vobject.skyhouseconsulting.com/usage.html
+
+def save( request ):
+	return HttpResponseRedirect("listing")
 

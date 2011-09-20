@@ -1,0 +1,85 @@
+{% extends 'calendar.html' %}
+
+{% block content %}
+
+<style>
+	div			{
+				border:			1px solid black;
+				background-color: 	white;
+				padding-top:		5px;
+				padding-bottom:		5px;
+				}
+
+	#divListing		{
+				width:			400px;
+				height:			350px;
+				overflow-x:		hidden;
+				overflow-y:		scroll;
+				}
+
+	#divListing table	{
+				width:		380px;
+				font-size:	8pt;
+				padding:	5px;
+				}
+
+	tr.event	{
+			background-color: white;
+			cursor:		pointer;
+			color:		black;
+			}
+	tr.event:hover	{
+			background-color: blue;
+			color:		white;
+			}
+
+	#divSearch		{
+				text-align:	left;
+				font-size:	8pt;
+				width:		400px;
+				}
+	#divSearch input	{
+				width:		300px;
+				font-size:	8pt;
+				}
+</style>
+
+{% include 'edit.html' %}
+
+<center>
+
+<script>
+	function selectAll() {
+		}
+</script>
+
+<div id=divListing>
+	<table cellspacing=0>
+		{% for event in Events %}
+		<tr class=event id="tr_{{ event.id }}" onClick="javascript:edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">
+			<td width="8%">
+				<input type=checkbox id="checkbox_{{ event.id }}"/>
+			</td>
+			<td width="40%" align=right>{{ event.start|date:'d. M Y H:m' }}</td>
+			<td width="40%" align=left>{{ event.end|date:'d. M Y H:m' }}</td>
+			<td width="12%" align=left>{{ event.summary }}</td>
+<!--			<td><input type=button class=singlemenu value=""/></td>-->
+		
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+
+
+<br/>
+
+<div id=divSearch>
+	<input type=checkbox onClick="selectAll();"/> Alle markieren <br/>
+
+	<hr/>
+
+	Suche: 
+	<input type=text name=search />
+</div>
+
+{% endblock %}
