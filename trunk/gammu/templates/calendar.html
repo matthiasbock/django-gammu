@@ -10,11 +10,10 @@
 	<script type="text/javascript" src="static/fader.js"></script>
 </head>
 
-<body>
-
 <style>
 	body		{
 			text-align:			center;
+			font-size:			10pt;
 			overflow:			hidden;
 			}
 	div.body	{
@@ -22,62 +21,15 @@
 			background-color: #7474cf;
 			position: absolute;
 			}
-	#left_top_corner {
-			background-image: url('static/corner_white.png');
-			background-position: left top;
-			background-repeat: no-repeat;
-			top:	0px;
-			left:	0px;
-			width:	10%;
-			height:	10%;
-			}
-	#top_bar	{
-			top:	0px;
-			right:	0px;
-			width:	90%;
-			height:	10%;
-			}
-	#side_bar	{
-			top:	10%;
-			left:	0px;
-			width:	10%;
-			height:	90%;
-			}
-	#content	{
-			background-image: url('static/corner_blue.png');
-			background-position: left top;
-			background-repeat: no-repeat;
-			background-color: white;
-			top:	10%;
-			left:	10%;
-			width:	90%;
-			height:	90%;
-			text-align: center;
-			}
 </style>
 
-<!--
-<div class=body id=left_top_corner>
-</div>
-
-<div class=body id=top_bar>
-</div>
-
-<div class=body id=side_bar>
-</div>
-
-<div class=body id=content>
--->
+<body>
 
 <br/>
 <h1>Calendar</h1>
 <br/><br/><br/>
 
 {% block content %}{% endblock %}
-
-<!--
-</div>
--->
 
 </body>
 
