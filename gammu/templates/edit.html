@@ -26,6 +26,10 @@
 				text-align:	center;
 				width:		80px;
 				}
+	#divEdit input.button:hover	{
+				border:			1px solid #485879;
+				background-color:	#8a8ae9;
+				}
 </style>
 
 <div id=divEdit>
@@ -49,7 +53,10 @@
 				<td><input type=text name=sumamry id=edit_summary /></td>
 			</tr>
 			<tr>
-				<td colspan=2 align=right>
+				<td>
+					<input type=button class=button value=Delete onClick="FadeOut('divEdit',1);"/>
+				</td>
+				<td align=right>
 					<input type=submit class=button value=Save />
 					<input type=button class=button value=Cancel onClick="FadeOut('divEdit',1);"/>
 				</td>
