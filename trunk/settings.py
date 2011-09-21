@@ -1,5 +1,3 @@
-# Django settings for django_calendar project.
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -20,8 +18,7 @@ DATABASES = {
 		}
 	}
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '2*n=_g9_(1x@%+d$p(+0cr_naa_v8@yt%@j6+-^%cdcowk^e%0'
+SECRET_KEY = ''
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -30,7 +27,7 @@ SECRET_KEY = '2*n=_g9_(1x@%+d$p(+0cr_naa_v8@yt%@j6+-^%cdcowk^e%0'
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/Berlin'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -103,7 +100,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'Django.urls'
 
 TEMPLATE_DIRS = (
-	"/var/www/Django/gammu/templates",
+	"/var/www/Django/gammu/calendar/",
 )
 
 INSTALLED_APPS = (
