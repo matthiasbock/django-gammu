@@ -26,7 +26,7 @@ Wammu does it.
  * Sync
 That's it. Very easy, everything works just excellent and took me just a few seconds although I didn't know anything about how to do it :-)
 
-(you might know, that Bluetooth on the iPhone 3 doesn't work at all ...)
+(you may know, that Bluetooth on the Apples iPhone 3 crap doesn't work at all ...)
 
 == ... from the console ==
  * Turn on Bluetooth by clicking the Bluetooth app and "Power On"
