@@ -5,6 +5,8 @@ from django.shortcuts import render_to_response
 
 from Django.gammu.models import *
 
+# VCF export: http://vobject.skyhouseconsulting.com/usage.html
+
 DB = 'django-gammu'
 
 def index( request ):
@@ -24,7 +26,10 @@ def listing( request ):
 	params["days"] = [ {'date':'2011-07-22', 'events':[{'id':'1', 'start':'22:00', 'end':'23:00', 'summary':'django-calendar programmieren', 'selected':'checked'}]} ]
 	return render_to_response("listing.html", params)
 
-#http://vobject.skyhouseconsulting.com/usage.html
+def week( request ):
+	params = {}
+	params["days"] = ["x" for i in range(0,7)]
+	return render_to_response("week.html", params)
 
 def save( request ):
 	ID = request.GET.get("id")
