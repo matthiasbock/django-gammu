@@ -24,6 +24,9 @@ Wammu does it.
  * Wammu will detect "MTK1 MTK2" via Bluetooth
  * Connect
  * Sync
+
+http://django-gammu.googlecode.com/svn/trunk/wammu.jpg
+
 That's it. Very easy, everything works just excellent and took me just a few seconds although I didn't know anything about how to do it :-)
 
 (you may know, that Bluetooth on the Apples iPhone 3 crap doesn't work at all ...)
@@ -41,7 +44,7 @@ $ hcitool scan
 Scanning ...
 	20:E2:05:DE:66:01	MTKBTDEVICE
 }}}
- * Find the bluetooth channel, that serves a serial port:
+ * Find the bluetooth channel, that serves a Dial-up Networking:
 {{{
 $ sdptool browse 20:E2:05:DE:66:01
 
@@ -181,18 +184,18 @@ Language Base Attr List:
   encoding:    0x6a
   base_offset: 0x100
 }}}
- * as you see, it is channel 10:
+ * as you see, it is channel 8:
 {{{
 ...
-Service Name: Serial Port0
+Service Name: Dial-up Networking
 ...
   "RFCOMM" (0x0003)
-    Channel: 10
+    Channel: 8
 ...
 }}}
  * connect a radio frequency driven COM port:
 {{{
-$ rfcomm0 0 20:E2:05:DE:66:01 10
+$ rfcomm0 0 20:E2:05:DE:66:01 8
 }}}
  * your local teletype */dev/rfcomm0* is now connected and you can use gammu to sync the phone
 
