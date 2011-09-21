@@ -203,6 +203,31 @@ $ rfcomm0 0 20:E2:05:DE:66:01 10
 
 http://django-gammu.googlecode.com/svn/trunk/SciPhone_Settings.jpg
 
+== gammu ==
+
+{{{
+ $ rfcomm connect 0 20:E2:05:DE:66:01 10
+
+[gammu]
+port = /dev/rfcomm0
+model = 
+connection = blueat
+synchronizetime = yes
+logfile = 
+logformat = nothing
+use_locking = 
+gammuloc = 
+
+ $ gammu --config .gammurc getmemory MC 1
+
+Memory MC, Location 1
+General number       : "0123456789"
+Name                 : "test"
+Date and time        : Do 15 Sep 2011 10:20:00 
+
+0 entries empty, 1 entries filled
+}}}
+
 = Synchronization via GPRS =
 
 As far, as I know, it unfortunately doesn't support UMTS, but you can set up
