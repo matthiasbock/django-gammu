@@ -44,7 +44,7 @@ $ hcitool scan
 Scanning ...
 	20:E2:05:DE:66:01	MTKBTDEVICE
 }}}
- * Find the bluetooth channel, that serves a Dial-up Networking:
+ * Find the bluetooth channel, that serves a SPP:
 {{{
 $ sdptool browse 20:E2:05:DE:66:01
 
@@ -184,23 +184,24 @@ Language Base Attr List:
   encoding:    0x6a
   base_offset: 0x100
 }}}
- * as you see, it is channel 8:
+ * as you see, it is channel 10:
 {{{
 ...
-Service Name: Dial-up Networking
+Service Name: Serial Port0
 ...
   "RFCOMM" (0x0003)
-    Channel: 8
+    Channel: 10
 ...
 }}}
  * connect a radio frequency driven COM port:
 {{{
-$ rfcomm0 0 20:E2:05:DE:66:01 8
+$ rfcomm0 0 20:E2:05:DE:66:01 10
 }}}
- * your local teletype */dev/rfcomm0* is now connected and you can use gammu to sync the phone
+ * your local teletype */dev/rfcomm0* is now connected and you can use gammu or wammu to sync the phone
 
-== ... do it manually using AT commands ==
- * Details follow ...
+ * start wammu
+
+http://django-gammu.googlecode.com/svn/trunk/SciPhone_Settings.jpg
 
 = Synchronization via GPRS =
 
