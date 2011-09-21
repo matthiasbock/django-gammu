@@ -3,15 +3,16 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 
-from Django.databases import *
 from Django.gammu.models import *
+
+DB = 'django-gammu'
 
 def index( request ):
 	return HttpResponseRedirect("simplelist")
 
 def simplelist( request ):
 	params = {}
-	params["Events"] = Events.objects.using('django-gammu').all()
+	params["Events"] = Events.objects.using(DB).all()
 	return render_to_response("simplelist.html", params)
 
 def listing( request ):
@@ -26,5 +27,23 @@ def listing( request ):
 #http://vobject.skyhouseconsulting.com/usage.html
 
 def save( request ):
-	return HttpResponseRedirect("listing")
+	ID = request.GET.get("id")
+	start = request.GET.get("start")
+	end = request.GET.get("end")
+	summary = request.GET.get("summary")
+	if ID == "new":
+		e = Events.objects.using(DB).create( start=start, end=end, summary=summary )
+	else:
+		e = Events.objects.using(DB).get( id=ID )
+		e.start = start
+		e.end = end
+		e.summary = summary
+		e.save()
+	return HttpResponseRedirect(".")
+
+def delete( request ):
+	ID = request.GET.get("id")
+	e = Events.objects.using(DB).get( id=ID )
+	e.delete()
+	return HttpResponseRedirect(".")
 
