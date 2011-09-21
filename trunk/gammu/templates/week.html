@@ -1,1 +1,44 @@
-...
+{% extends 'calendar.html' %}
+
+{% block content %}
+
+<style>
+	div			{
+				}
+
+	#div_Week		{
+				border:			1px solid black;
+				padding:		5px;
+				width:			1200px;
+				height:			350px;
+				background-color:	#d7d793;
+				overflow:		hidden;
+				}
+
+	table.week_table	{
+				width:		100%;
+				font-size:	10pt;
+				padding:	5px;
+				}
+</style>
+
+<center>
+<div id=div_Week>
+	<table class=week_table cellspacing=0>
+		<tr>
+			{% for day in days %}
+			<td>
+				<table class=event_table cellspacing=0>
+					<tr class=event>
+						<td width="10%"><input type=checkbox></td>
+						<td width="20%">10:00</td>
+						<td width="*">summary</td>
+					</tr>
+				</table>
+			</td>
+			{% endfor %}
+		</tr>
+	</table>
+</div>
+
+{% endblock %}
