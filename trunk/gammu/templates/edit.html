@@ -33,7 +33,7 @@
 </style>
 
 <div id=divEdit>
-	<form action=save method=POST>
+	<form action=save method=GET>
 		<input type=hidden name=id id=edit_id value=''/>
 
 		<table>
@@ -50,11 +50,11 @@
 			</tr>
 			<tr>
 				<td>Summary:</td>
-				<td><input type=text name=sumamry id=edit_summary /></td>
+				<td><input type=text name=summary id=edit_summary /></td>
 			</tr>
 			<tr>
 				<td>
-					<input type=button class=button value=Delete onClick="FadeOut('divEdit',1);"/>
+					<input type=button class=button id=DeleteButton value=Delete onClick="DeleteEvent();"/>
 				</td>
 				<td align=right>
 					<input type=submit class=button value=Save />
@@ -66,20 +66,32 @@
 </div>
 
 <script>
-	function edit( id, start, end, summary ) {
+	function Edit( id, start, end, summary ) {
 		document.getElementById('edit_id').value = id;
 		document.getElementById('edit_start').value = start;
 		document.getElementById('edit_end').value = end;
 		document.getElementById('edit_summary').value = summary;
+		document.getElementById('DeleteButton').style.visibility = "visible";
 		FadeIn('divEdit', 0);
 		}
 
-	function create() {
+	function NewEvent() {
 		document.getElementById('edit_id').value = 'new';
-		document.getElementById('edit_start').value = "";
+		document.getElementById('edit_start').value = "";	
 		document.getElementById('edit_end').value = "";
 		document.getElementById('edit_summary').value = "";
+		document.getElementById('DeleteButton').style.visibility = "hidden";
 		FadeIn('divEdit', 0);
+		document.getElementById('edit_start').focus();
+		}
+
+	function DeleteEvent() {
+		summary = document.getElementById('edit_summary').value;
+		if (confirm('Really delete event "'+summary+'" ?')) {
+			FadeOut('divEdit',1);
+			id = document.getElementById('edit_id').value;
+			window.location.href = "delete?id="+id;
+			}
 		}
 </script>
 

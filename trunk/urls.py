@@ -17,7 +17,9 @@ urlpatterns = patterns('',
 	(r'^calendar/listing$',				"Django.gammu.calendar.listing"),
 	(r'^calendar/week$',				"Django.gammu.calendar.week"),
 	(r'^calendar/month$',				"Django.gammu.calendar.month"),
+
 	(r'^calendar/save$',				"Django.gammu.calendar.save"),
+	(r'^calendar/delete$',				"Django.gammu.calendar.delete"),
 
 	(r'^calendar/import/$',				"Django.gammu.calendar.import.index"),
 	(r'^calendar/export/$',				"Django.gammu.calendar.export.index"),

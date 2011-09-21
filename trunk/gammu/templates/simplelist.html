@@ -3,14 +3,14 @@
 {% block 'list' %}
 <div id=divListing>
 	<table cellspacing=0>
-		{% for event in Events %}
-		<tr class=event id="tr_{{ event.id }}">
+		{% for Event in Events %}
+		<tr class=event id="tr_{{ Event.id }}">
 			<td width="8%">
-				<input type=checkbox id="checkbox_{{ event.id }}"/>
+				<input type=checkbox id="checkbox_{{ Event.id }}"/>
 			</td>
-			<td width="40%" align=right onClick="javascript:edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.start|date:'d. M Y H:m' }}</td>
-			<td width="40%" align=left onClick="javascript:edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.end|date:'d. M Y H:m' }}</td>
-			<td width="12%" align=left onClick="javascript:edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.summary }}</td>
+			<td width="30%" onClick="Edit('{{ Event.id }}','{{ Event.start|date:'d.m.Y H:i' }}','{{ Event.end|date:'d.m.Y H:i' }}','{{ Event.summary }}');">{{ Event.start|date:'d.m.y H:i' }}</td>
+			<td width="30%" onClick="Edit('{{ Event.id }}','{{ Event.start|date:'d.m.Y H:i' }}','{{ Event.end|date:'d.m.Y H:i' }}','{{ Event.summary }}');">{{ Event.end|date:'d.m.y H:i' }}</td>
+			<td width="*" align=right onClick="Edit('{{ Event.id }}','{{ Event.start|date:'d.m.Y H:i' }}','{{ Event.end|date:'d.m.Y H:i' }}','{{ Event.summary }}');">{{ Event.summary }}</td>
 		</tr>
 		{% endfor %}
 	</table>
