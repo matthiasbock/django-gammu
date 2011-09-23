@@ -9,7 +9,6 @@
 				padding-top:		5px;
 				padding-bottom:		5px;
 				}
-
 	#List			{
 				border:			1px solid black;
 				width:			400px;
@@ -18,7 +17,6 @@
 				overflow-y:		scroll;
 				background-color:	#d7d793;
 				}
-
 	#divSearch		{
 				width:		400px;
 				text-align:	left;
@@ -29,10 +27,36 @@
 				width:		300px;
 				font-size:	10pt;
 				}
+
+	a.arrow			{
+				background-color:	#d7d7f6;
+				display:		block;
+				margin:			0 auto;
+				width:			64px;
+				height:			64px;
+				}
+	a#left			{
+				float:			left;
+				background-image:	url('static/Arrow-left.png');
+				}
+	a#left:hover		{
+				background-image:	url('static/Arrow-left_down.png');
+				}
+	a#right			{
+				float:			right;
+				background-image:	url('static/Arrow-right.png');
+				}
+	a#right:hover		{
+				background-image:	url('static/Arrow-right_down.png');
+				}
 </style>
 
 <center>
+
+<a class=arrow id=left href="#"></a>
 <iframe name=List id=List src="simplelist"></iframe>
+<a class=arrow id=right href="#"></a>
+
 <br/>
 
 [ <a href="javascript:NewEvent();">New Event</a> ]
