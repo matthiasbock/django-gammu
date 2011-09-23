@@ -1,1 +1,87 @@
-...
+{% extends 'calendar.html' %}
+
+{% block content %}
+
+<style>
+	div			{
+				padding-top:		5px;
+				padding-bottom:		5px;
+				}
+	#main			{
+				width:			600px;
+				}
+	div.List		{
+				border:			1px solid black;
+				width:			400px;
+				height:			350px;
+				overflow-x:		hidden;
+				overflow-y:		scroll;
+				background-color:	#d7d793;
+				}
+	#divSearch		{
+				border:			1px solid black;
+				width:			400px;
+				text-align:		left;
+				font-size:		10pt;
+				background-color:	#d7d793;
+				}
+	#divSearch input	{
+				width:		300px;
+				font-size:	10pt;
+				}
+
+	a.arrow			{
+				background-color:	#d7d7f6;
+				display:		block;
+				margin:			0 auto;
+				width:			64px;
+				height:			64px;
+				vertical-align:		middle;
+				}
+	a#left			{
+				float:			left;
+				background-image:	url('static/Arrow-left.png');
+				}
+	a#left:hover		{
+				background-image:	url('static/Arrow-left_down.png');
+				}
+	a#right			{
+				float:			right;
+				background-image:	url('static/Arrow-right.png');
+				}
+	a#right:hover		{
+				background-image:	url('static/Arrow-right_down.png');
+				}
+	img.invisible		{
+				position:		absolute;
+				left:			0px;
+				top:			0px;
+				visibility:		hidden;
+				}
+</style>
+
+<!-- preload images -->
+<img class=invisible src="static/Arrow-left_down.png">
+<img class=invisible src="static/Arrow-right_down.png">
+
+<center>
+
+<div id=main>
+	<h2>{{ date }}</h2>
+	<a class=arrow id=left href="#"></a>
+	<iframe class=Day src="simplelist?date={{ date }}"></iframe>
+	<iframe class=Day src="simplelist?date={{ date }}"></iframe>
+	<iframe class=Day src="simplelist?date={{ date }}"></iframe>
+	<a class=arrow id=right href="#"></a>
+</div>
+
+<br/>
+
+[ <a href="javascript:NewEvent();">New Event</a> ]
+
+<br/><br/>
+
+
+{% include 'edit.html' %}
+
+{% endblock %}

@@ -5,6 +5,8 @@ from django.shortcuts import render_to_response
 
 from Django.gammu.models import *
 
+from datetime import date
+
 # VCF export: http://vobject.skyhouseconsulting.com/usage.html
 
 DB = 'django-gammu'
@@ -17,9 +19,11 @@ def simplelist( request ):
 	params["Events"] = Events.objects.using(DB).all()
 	return render_to_response("simplelist.html", params)
 
-
 def day( request ):
+	if not request.GET.has_key("date"):
+		return HttpResponseRedirect("day?date="+date.today().strftime("%Y-%m-%d"))
 	params = {}
+	params["date"] = request.GET.get("date")
 	return render_to_response("day.html", params)
 
 def threedays( request ):
