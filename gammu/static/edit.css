@@ -1,0 +1,54 @@
+
+#divEdit			{
+				position:		absolute;
+				top:			250px;
+				left:			350px;
+				border:			1px solid black;
+				background-color:	#bfbfbf;
+				opacity:		0;
+				visibility:		hidden;
+				}
+
+#divEdit table			{
+				font-size:	12pt;
+				padding:	5px;
+				spacing:	2px;
+				}
+
+#divEdit input			{
+				border:		1px solid gray;
+				font-size:	12pt;
+				text-align:	center;
+				}
+#divEdit input.datetime		{
+				width:		200px;
+				}
+#divEdit input.summary		{
+				width:		99%;
+				}
+
+#divEdit input.button		{
+				font-size:	12pt;
+				text-align:	center;
+				width:		80px;
+				}
+#divEdit input.button:hover	{
+				border:			1px solid #485879;
+				background-color:	#8a8ae9;
+				}
+
+img.close			{
+				background-color:	#bfbfbf;
+				cursor:			pointer;
+				}
+img.close:hover			{
+				background-color:	white;
+				}
+img.datetime			{
+				vertical-align:		middle;
+				cursor:			pointer;
+				}
+img.datetime:hover		{
+				background-color:	#5252c1;
+				}
+
