@@ -10,16 +10,13 @@
 				padding-bottom:		5px;
 				}
 
-	#divListing		{
+	#List			{
+				border:			1px solid black;
 				width:			400px;
 				height:			350px;
 				overflow-x:		hidden;
 				overflow-y:		scroll;
 				background-color:	#d7d793;
-				}
-
-	table.event_table	{
-				width:		380px;
 				}
 
 	#divSearch		{
@@ -34,11 +31,9 @@
 				}
 </style>
 
-[ <a href="simplelist">simplelist</a> | <a href="listing">listing</a> ]
-<br/><br/>
-
 <center>
-{% block 'list' %}{% endblock %}
+<iframe name=List id=List src="list"></iframe>
+<br/>
 
 [ <a href="javascript:NewEvent();">New Event</a> ]
 

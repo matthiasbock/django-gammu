@@ -1,7 +1,28 @@
-{% extends 'listwrapper.html' %}
+<html>
 
-{% block 'list' %}
-<div id=divListing>
+<style>
+	body			{
+				font-size:		8pt;
+				}
+	table.event_table	{
+				width:			380px;
+				padding:		5px;
+				font-size:		10pt;
+				}
+	tr.event		{
+				background-color: 	white;
+				cursor:			pointer;
+				color:			black;
+				}
+	tr.event:hover		{
+				background-color:	#628bb5;
+				color:			white;
+				}
+</style>
+<link rel="stylesheet" type="text/css" href="static/list.css" />
+<body>
+	[ <a href="simplelist">simplelist</a> ]
+
 	<table class=event_table cellspacing=0>
 	{% for day in days %}
 		<tr class=separator>
@@ -22,5 +43,6 @@
 		{% endfor %}
 	{% endfor %}
 	</table>
-</div>
-{% endblock %}
+</body>
+
+</html>
