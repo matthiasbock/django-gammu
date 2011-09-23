@@ -19,6 +19,11 @@
 				border:		1px solid gray;
 				font-size:	12pt;
 				text-align:	center;
+				}
+	#divEdit input.datetime	{
+				width:		200px;
+				}
+	#divEdit input.summary	{
 				width:		450px;
 				}
 
@@ -52,15 +57,21 @@
 			</tr>
 			<tr>
 				<td>Start:</td>
-				<td><input type=text name=start id=edit_start /></td>
+				<td>
+					<input type=text name=startdate id=edit_startdate class=datetime />
+					<input type=text name=starttime id=edit_starttime class=datetime />
+				</td>
 			</tr>
 			<tr>
 				<td>End:</td>
-				<td><input type=text name=end id=edit_end /></td>
+				<td>
+					<input type=text name=enddate id=edit_enddate class=datetime />
+					<input type=text name=endtime id=edit_endtime class=datetime />
+				</td>
 			</tr>
 			<tr>
 				<td>Summary:</td>
-				<td><input type=text name=summary id=edit_summary /></td>
+				<td colspan=2><input type=text name=summary id=edit_summary class=summary /></td>
 			</tr>
 			<tr>
 				<td>
@@ -76,10 +87,12 @@
 </div>
 
 <script>
-	function Edit( id, start, end, summary ) {
+	function Edit( id, startdate, starttime, enddate, endtime, summary ) {
 		document.getElementById('edit_id').value = id;
-		document.getElementById('edit_start').value = start;
-		document.getElementById('edit_end').value = end;
+		document.getElementById('edit_startdate').value = startdate;
+		document.getElementById('edit_starttime').value = starttime;
+		document.getElementById('edit_enddate').value = enddate;
+		document.getElementById('edit_endtime').value = endtime;
 		document.getElementById('edit_summary').value = summary;
 		document.getElementById('DeleteButton').style.visibility = "visible";
 		FadeIn('divEdit', 0);
@@ -87,8 +100,10 @@
 
 	function NewEvent() {
 		document.getElementById('edit_id').value = 'new';
-		document.getElementById('edit_start').value = "";	
-		document.getElementById('edit_end').value = "";
+		document.getElementById('edit_startdate').value = "";
+		document.getElementById('edit_starttime').value = "";
+		document.getElementById('edit_enddate').value = "";
+		document.getElementById('edit_endtime').value = "";
 		document.getElementById('edit_summary').value = "";
 		document.getElementById('DeleteButton').style.visibility = "hidden";
 		FadeIn('divEdit', 0);
