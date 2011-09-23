@@ -15,4 +15,5 @@
  * Mobile Phones
    * [i68plus SciPhone i68+]
    * [iPhone]
+ * [Icons]
  * [Price Price and License]
