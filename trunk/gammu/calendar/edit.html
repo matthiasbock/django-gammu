@@ -1,47 +1,7 @@
-<style>
-	#divEdit		{
-				position:		absolute;
-				top:			250px;
-				left:			350px;
-				border:			1px solid black;
-				background-color:	#bfbfbf;
-				opacity:		0;
-				visibility:		hidden;
-				}
+{% include 'minical.html' %}
+{% include 'miniclock.html' %}
 
-	#divEdit table		{
-				font-size:	12pt;
-				padding:	5px;
-				spacing:	2px;
-				}
-
-	#divEdit input		{
-				border:		1px solid gray;
-				font-size:	12pt;
-				text-align:	center;
-				}
-	#divEdit input.datetime	{
-				width:		200px;
-				}
-	#divEdit input.summary	{
-				width:		450px;
-				}
-
-	#divEdit input.button	{
-				font-size:	12pt;
-				text-align:	center;
-				width:		80px;
-				}
-	#divEdit input.button:hover	{
-				border:			1px solid #485879;
-				background-color:	#8a8ae9;
-				}
-
-	img.close		{
-				background-color:	white;
-				cursor:			pointer;
-				}
-</style>
+<link rel="stylesheet" type="text/css" href="static/edit.css" />
 
 <div id=divEdit>
 	<form action=save method=GET>
@@ -50,23 +10,25 @@
 		<table>
 			<tr>
 				<td colspan=2 align=right>
-					<a href="javascript:FadeOut('divEdit',1);">
-					<img class=close src="static/close.png" width=20 height=20 />
-					</a>
+					<img class=close src="static/close.png" width=20 height=20 onClick="FadeOut('divEdit',1);" />
 				</td>
 			</tr>
 			<tr>
 				<td>Start:</td>
 				<td>
 					<input type=text name=startdate id=edit_startdate class=datetime />
+					<img class=datetime src="static/Office-calendar-modified.png" onClick="minical('edit_startdate');" />
 					<input type=text name=starttime id=edit_starttime class=datetime />
+					<img class=datetime src="static/Orologio_blu.png" onClick="miniclock('edit_starttime');"/>
 				</td>
 			</tr>
 			<tr>
 				<td>End:</td>
 				<td>
 					<input type=text name=enddate id=edit_enddate class=datetime />
+					<img class=datetime src="static/Office-calendar-modified.png" onClick="minical('edit_enddate');"/>
 					<input type=text name=endtime id=edit_endtime class=datetime />
+					<img class=datetime src="static/Orologio_blu.png" onClick="miniclock('edit_endtime');"/>
 				</td>
 			</tr>
 			<tr>
@@ -99,12 +61,17 @@
 		}
 
 	function NewEvent() {
+		var d = new Date();
+		now = d.getHours()+":"+d.getMinutes();
+		lh = d.getHours()+1;
+		if (lh > 23) lh = "00";
+		later = lh+":"+d.getMinutes();
 		document.getElementById('edit_id').value = 'new';
-		document.getElementById('edit_startdate').value = "";
-		document.getElementById('edit_starttime').value = "";
-		document.getElementById('edit_enddate').value = "";
-		document.getElementById('edit_endtime').value = "";
-		document.getElementById('edit_summary').value = "";
+		document.getElementById('edit_startdate').value = "{{ date }}";
+		document.getElementById('edit_starttime').value = now;
+		document.getElementById('edit_enddate').value = "{{ date }}";
+		document.getElementById('edit_endtime').value = later;
+		document.getElementById('edit_summary').value = "New Event";
 		document.getElementById('DeleteButton').style.visibility = "hidden";
 		FadeIn('divEdit', 0);
 		document.getElementById('edit_start').focus();
