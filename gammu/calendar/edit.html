@@ -3,6 +3,7 @@
 				position:		absolute;
 				top:			250px;
 				left:			350px;
+				border:			1px solid black;
 				background-color:	#bfbfbf;
 				opacity:		0;
 				visibility:		hidden;
@@ -33,6 +34,7 @@
 
 	img.close		{
 				background-color:	white;
+				cursor:			pointer;
 				}
 </style>
 
@@ -42,7 +44,11 @@
 
 		<table>
 			<tr>
-				<td colspan=2 align=right><img class=close src="static/close.png" width=20 height=20 /></td>
+				<td colspan=2 align=right>
+					<a href="javascript:FadeOut('divEdit',1);">
+					<img class=close src="static/close.png" width=20 height=20 />
+					</a>
+				</td>
 			</tr>
 			<tr>
 				<td>Start:</td>

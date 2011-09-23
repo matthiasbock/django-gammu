@@ -1,0 +1,59 @@
+
+body			{
+			text-align:			center;
+			font-size:			10pt;
+			overflow:			hidden;
+			background-color:		#d7d7f6;
+			}
+
+iframe.Day		{
+			border:			1px solid black;
+			width:			400px;
+			height:			350px;
+			overflow-x:		hidden;
+			overflow-y:		scroll;
+			background-color:	#d7d793;
+			}
+
+div.Search		{
+			border:			1px solid black;
+			width:			400px;
+			text-align:		left;
+			font-size:		10pt;
+			background-color:	#d7d793;
+			}
+div.Search input	{
+			width:		300px;
+			font-size:	10pt;
+			}
+
+a.arrow			{
+			background-color:	#d7d7f6;
+			display:		block;
+			margin:			0 auto;
+			width:			64px;
+			height:			64px;
+			vertical-align:		middle;
+			}
+a#left			{
+			float:			left;
+			background-image:	url('Arrow-left.png');
+			}
+a#left:hover		{
+			background-image:	url('Arrow-left_down.png');
+			}
+a#right			{
+			float:			right;
+			background-image:	url('Arrow-right.png');
+			}
+a#right:hover		{
+			background-image:	url('Arrow-right_down.png');
+			}
+
+img.invisible		{
+			position:		absolute;
+			left:			0px;
+			top:			0px;
+			visibility:		hidden;
+			}
+
