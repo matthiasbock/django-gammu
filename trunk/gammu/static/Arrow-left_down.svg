@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xml:space="preserve"
+   width="128pt"
+   height="128pt"
+   viewBox="0 0 507.946 507.946"
+   id="svg49"
+   sodipodi:version="0.27"
+   sodipodi:docname="Arrow-left_down.svg"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   inkscape:export-filename="/home/user/Desktop/Arrow-left_down.png"
+   inkscape:export-xdpi="36"
+   inkscape:export-ydpi="36"><metadata
+   id="metadata12"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata>
+  <defs
+   id="defs62"><inkscape:perspective
+   sodipodi:type="inkscape:persp3d"
+   inkscape:vp_x="0 : 80 : 1"
+   inkscape:vp_y="0 : 1000 : 0"
+   inkscape:vp_z="160 : 80 : 1"
+   inkscape:persp3d-origin="80 : 53.333333 : 1"
+   id="perspective14" />
+    <radialGradient
+   id="aigrd1"
+   cx="293.68411"
+   cy="309.25342"
+   r="150.7063"
+   fx="293.68411"
+   fy="309.25342"
+   gradientUnits="userSpaceOnUse"
+   style="stroke:#000000;stroke-opacity:0.986014;stroke-width:0.981612;">
+      <stop
+   offset="0"
+   style="stop-color:#73ffff;stroke:#000000;stroke-opacity:0.986014;stroke-width:0.981612;"
+   id="stop53" />
+      <stop
+   offset="0.2809"
+   style="stop-color:#2EA6B9;stroke:#000000;stroke-opacity:0.986014;stroke-width:0.981612;"
+   id="stop54" />
+      <stop
+   offset="1"
+   style="stop-color:#006b8b;stroke:#000000;stroke-opacity:0.986014;stroke-width:0.981612;"
+   id="stop55" />
+    </radialGradient>
+  </defs>
+  <sodipodi:namedview
+   id="base"
+   showgrid="false"
+   inkscape:zoom="1.475"
+   inkscape:cx="80"
+   inkscape:cy="75.932204"
+   inkscape:window-width="1280"
+   inkscape:window-height="950"
+   inkscape:window-x="0"
+   inkscape:window-y="24"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg49" />
+  <path
+   style="font-size:12;stroke:none;stroke-width:0.979268;stroke-opacity:0.986014;fill:#a4c9ee;fill-opacity:0.7;"
+   d="M134.757,263.776c0,66.739,54.298,121.04,121.039,121.04c66.739,0,121.039-54.301,121.039-121.04c0-66.741-54.3-121.039-121.039-121.039c-66.741,0-121.039,54.298-121.039,121.039z"
+   id="path51"
+   transform="matrix(1.89511,0,0,1.91236,-231.458,-247.971)" />
+  <path
+   style="font-size:12;fill:url(#aigrd1);fill-rule:evenodd;stroke:#1c6671;stroke-width:7.73106000000000027;stroke-opacity:0.98823499999999997"
+   d="M356.643,263.366c0,57.027-46.23,103.257-103.256,103.257c-57.027,0-103.256-46.229-103.256-103.257c0-57.027,46.229-103.256,103.256-103.256     c57.025,0,103.256,46.229,103.256,103.256z"
+   id="path56"
+   transform="matrix(2.04451,0,0,2.04451,-264.353,-281.723)" />
+  <path
+   style="font-size:12px;opacity:0.7;fill:#ffffff;stroke:#1c6772;stroke-width:4.74194145;stroke-opacity:0.98823499"
+   d="m 365.8829,214.97385 c 0,0 -52.98985,0.2323 -78.26801,0.34318 -0.0981,-22.32195 -0.25883,-59.44042 -0.25883,-59.44042 -0.0233,-5.37571 -2.21161,-10.38795 -5.88337,-14.02805 -1.81895,-1.80326 -4.00035,-3.26913 -6.46358,-4.27574 -7.43757,-3.04208 -15.97571,-1.30778 -21.6345,4.40024 L 145.84635,250.43675 c -7.72646,7.79367 -7.67197,20.37444 0.1217,28.1009 L 254.43738,386.0715 c 5.70802,5.6588 14.26226,7.32048 21.67321,4.21409 7.41234,-3.1078 12.22133,-10.37739 12.18512,-18.41284 0,0 -0.16497,-37.11986 -0.26165,-59.44322 25.27957,-0.10948 78.26945,-0.33616 78.26945,-0.33616 5.27033,-0.0214 10.31661,-2.13683 14.02665,-5.87915 3.71005,-3.74231 5.78027,-8.80532 5.75885,-14.07565 l -0.24851,-57.38204 c -0.0242,-5.27032 -2.13823,-10.3152 -5.88055,-14.02525 -3.74231,-3.71004 -8.80673,-5.78166 -14.07705,-5.75743 z"
+   id="path59" />
+</svg>
