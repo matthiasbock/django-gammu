@@ -17,16 +17,12 @@ def simplelist( request ):
 	params["Events"] = Events.objects.using(DB).all()
 	return render_to_response("simplelist.html", params)
 
-def advancedlist( request ):
-	params = {}
-	# get current date, show yesterday, today and the next 7 days
-	# retrieve matching events from database
-	#Events.objects.using( CalendarDB ).all()
-	# return array of days, containing the matched events
-	params["days"] = [ {'date':'2011-07-22', 'events':[{'id':'1', 'start':'22:00', 'end':'23:00', 'summary':'django-calendar programmieren', 'selected':'checked'}]} ]
-	return render_to_response("list.html", params)
 
 def day( request ):
+	params = {}
+	return render_to_response("day.html", params)
+
+def threedays( request ):
 	params = {}
 	return render_to_response("day.html", params)
 
@@ -34,6 +30,15 @@ def week( request ):
 	params = {}
 	params["days"] = ["x" for i in range(0,7)]
 	return render_to_response("week.html", params)
+
+def month( request ):
+	params = {}
+	return render_to_response("month.html", params)
+
+def year( request ):
+	params = {}
+	return render_to_response("year.html", params)
+
 
 def save( request ):
 	ID = request.GET.get("id")

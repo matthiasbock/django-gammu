@@ -11,12 +11,21 @@
 			<td width="8%">
 				<input type=checkbox id="checkbox_{{ Event.id }}"/>
 			</td>
-			<td width="30%" onClick="Edit('{{ Event.id }}','{{ Event.start|date:'d.m.Y H:i' }}','{{ Event.end|date:'d.m.Y H:i' }}','{{ Event.summary }}');">{{ Event.start|date:'d.m.y H:i' }}</td>
-			<td width="30%" onClick="Edit('{{ Event.id }}','{{ Event.start|date:'d.m.Y H:i' }}','{{ Event.end|date:'d.m.Y H:i' }}','{{ Event.summary }}');">{{ Event.end|date:'d.m.y H:i' }}</td>
-			<td width="*" align=right onClick="Edit('{{ Event.id }}','{{ Event.start|date:'d.m.Y H:i' }}','{{ Event.end|date:'d.m.Y H:i' }}','{{ Event.summary }}');">{{ Event.summary }}</td>
+			<td width="30%" onClick="parent.Edit('{{ Event.id }}','{{ Event.start|date:'d.m.Y H:i' }}','{{ Event.end|date:'d.m.Y H:i' }}','{{ Event.summary }}');">{{ Event.start|date:'d.m.y H:i' }}</td>
+			<td width="30%" onClick="parent.Edit('{{ Event.id }}','{{ Event.start|date:'d.m.Y H:i' }}','{{ Event.end|date:'d.m.Y H:i' }}','{{ Event.summary }}');">{{ Event.end|date:'d.m.y H:i' }}</td>
+			<td width="*" align=right onClick="parent.Edit('{{ Event.id }}','{{ Event.start|date:'d.m.Y H:i' }}','{{ Event.end|date:'d.m.Y H:i' }}','{{ Event.summary }}');">{{ Event.summary }}</td>
 		</tr>
 		{% endfor %}
 	</table>
+
+	<script>
+		document.onkeydown = function(evt) {
+		    evt = evt || window.event;
+		    if (evt.keyCode == 27) {
+			parent.FadeOut('divEdit',1);
+		    }
+		};
+	</script>
 </body>
 
 </html>
