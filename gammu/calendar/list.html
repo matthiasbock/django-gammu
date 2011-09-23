@@ -1,25 +1,7 @@
 <html>
 
-<style>
-	body			{
-				font-size:		8pt;
-				}
-	table.event_table	{
-				width:			380px;
-				padding:		5px;
-				font-size:		10pt;
-				}
-	tr.event		{
-				background-color: 	white;
-				cursor:			pointer;
-				color:			black;
-				}
-	tr.event:hover		{
-				background-color:	#628bb5;
-				color:			white;
-				}
-</style>
 <link rel="stylesheet" type="text/css" href="static/list.css" />
+
 <body>
 	[ <a href="simplelist">simplelist</a> ]
 
@@ -35,14 +17,23 @@
 				<td>
 					<input type=checkbox id="checkbox_{{ event.id }}" {{ event.selected }}/>
 				</td>
-				<td align=right onClick="edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.start }}</td>
-				<td align=left onClick="edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.end }}</td>
-				<td class=edit onClick="edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.summary }}</td>
+				<td align=right onClick="parent.Edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.start }}</td>
+				<td align=left onClick="parent.Edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.end }}</td>
+				<td class=edit onClick="parent.Edit('{{ event.id }}','{{ event.start }}','{{ event.end }}','{{ event.summary }}');">{{ event.summary }}</td>
 	
 			</tr>
 		{% endfor %}
 	{% endfor %}
 	</table>
+
+	<script>
+		document.onkeydown = function(evt) {
+		    evt = evt || window.event;
+		    if (evt.keyCode == 27) {
+			parent.FadeOut('divEdit',1);
+		    }
+		};
+	</script>
 </body>
 
 </html>

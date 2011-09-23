@@ -17,7 +17,6 @@ urlpatterns = patterns('',
 	(r'^calendar/$',				"Django.gammu.calendar.index"),
 
 	(r'^calendar/simplelist$',			"Django.gammu.calendar.simplelist"),
-	(r'^calendar/list$',				"Django.gammu.calendar.advancedlist"),
 
 	(r'^calendar/day$',				"Django.gammu.calendar.day"),
 	(r'^calendar/threedays$',			"Django.gammu.calendar.threedays"),

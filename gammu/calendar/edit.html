@@ -30,6 +30,10 @@
 				border:			1px solid #485879;
 				background-color:	#8a8ae9;
 				}
+
+	img.close		{
+				background-color:	white;
+				}
 </style>
 
 <div id=divEdit>
@@ -38,7 +42,7 @@
 
 		<table>
 			<tr>
-				<td colspan=2 align=right><img src="static/close.png" height=20 /></td>
+				<td colspan=2 align=right><img class=close src="static/close.png" width=20 height=20 /></td>
 			</tr>
 			<tr>
 				<td>Start:</td>
@@ -93,5 +97,12 @@
 			window.location.href = "delete?id="+id;
 			}
 		}
+
+	document.onkeydown = function(evt) {
+	    evt = evt || window.event;
+	    if (evt.keyCode == 27) {
+		FadeOut('divEdit',1);
+	    }
+	};
 </script>
 
