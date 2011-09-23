@@ -9,3 +9,5 @@
 by Vadim Plessky, BSD License.
 
  * http://commons.wikimedia.org/wiki/File:Orologio_blu.svg
+
+ * http://commons.wikimedia.org/wiki/File:Office-calendar-modified.svg
