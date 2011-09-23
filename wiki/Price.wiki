@@ -5,6 +5,3 @@ This project is *free software* licensed as GNU GPL v2.
 If you like this software, *please* feel free to *donate a Dollar/Euro* via Paypal to mabo-technik@web.de
 
 Thank you!
-
-
-[http://commons.wikimedia.org/wiki/File:Arrow-left.svg Arrow_left] and [http://commons.wikimedia.org/wiki/File:Arrow-right.svg Arrow_right] by Vadim Plessky, BSD License.
