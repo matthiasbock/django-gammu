@@ -1,7 +1,10 @@
-{% extends 'listwrapper.html' %}
+<html>
 
-{% block 'list' %}
-<div id=divListing>
+<link rel="stylesheet" type="text/css" href="static/list.css" />
+
+<body>
+	[ <a href="list">advanced list</a> ]
+
 	<table class=event_table cellspacing=0>
 		{% for Event in Events %}
 		<tr class=event id="tr_{{ Event.id }}">
@@ -14,5 +17,6 @@
 		</tr>
 		{% endfor %}
 	</table>
-</div>
-{% endblock %}
+</body>
+
+</html>
