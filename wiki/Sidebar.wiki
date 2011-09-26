@@ -6,14 +6,13 @@
  * [Contacts]
  * [SMS]
  * gammu
-   * [gammu]
-   * [wammu]
- * Bluetooth
-   * [Bluetooth ... in general]
-   * [Bluetooth_Python Python]
-   * [Bluetooth_Dialing Dialing]
+  * [gammu]
+  * [wammu]
+ * [Bluetooth_Dialing Bluetooth Dialing]
  * Mobile Phones
-   * [i68plus SciPhone i68+]
-   * [iPhone]
+  * [i68plus SciPhone i68+]
+  * [iPhone]
+ * Synchronization
+  * [Evolution]
  * [Icons]
- * [Price Price and License]
+ * [Price Price & License]
