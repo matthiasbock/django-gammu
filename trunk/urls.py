@@ -24,6 +24,8 @@ urlpatterns = patterns('',
 	(r'^calendar/month$',				"Django.gammu.calendar.month"),
 	(r'^calendar/year$',				"Django.gammu.calendar.year"),
 
+	(r'^calendar/minical$',				"Django.gammu.calendar.minical"),
+	(r'^calendar/miniclock$',			"Django.gammu.calendar.miniclock"),
 	(r'^calendar/save$',				"Django.gammu.calendar.save"),
 	(r'^calendar/delete$',				"Django.gammu.calendar.delete"),
 
