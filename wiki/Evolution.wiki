@@ -1,0 +1,9 @@
+#summary GNOME Evolution
+
+= Evolution =
+http://django-gammu.googlecode.com/svn/trunk/Evolution/version.png
+
+= Contacts =
+http://django-gammu.googlecode.com/svn/trunk/Evolution/webdav.png
+
+= Calendar =
