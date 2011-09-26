@@ -1,6 +1,9 @@
 #summary GNOME Evolution
 
 = Evolution =
+
+* http://wiki.ubuntuusers.de/evolution#syncEvolution
+
 http://django-gammu.googlecode.com/svn/trunk/Evolution/version.png
 
 = Contacts =
