@@ -2,16 +2,16 @@
 
 = Icons =
 
- * http://commons.wikimedia.org/wiki/File:Arrow-left.svg
+ * [http://commons.wikimedia.org/wiki/File:Arrow-left.svg Arrow-left.svg]
 http://django-gammu.googlecode.com/svn/trunk/gammu/static/Arrow-left.png
- and
- * http://commons.wikimedia.org/wiki/File:Arrow-right.svg
+
+ * [http://commons.wikimedia.org/wiki/File:Arrow-right.svg Arrow-right.svg]
 http://django-gammu.googlecode.com/svn/trunk/gammu/static/Arrow-right.png
 
 by Vadim Plessky, BSD License.
 
- * http://commons.wikimedia.org/wiki/File:Orologio_blu.svg
+ * [http://commons.wikimedia.org/wiki/File:Orologio_blu.svg Orologio_blu.svg]
 http://django-gammu.googlecode.com/svn/trunk/gammu/static/Orologio_blu.png
 
- * http://commons.wikimedia.org/wiki/File:Office-calendar-modified.svg
+ * [http://commons.wikimedia.org/wiki/File:Office-calendar-modified.svg Office-calendar-modified.svg]
 http://django-gammu.googlecode.com/svn/trunk/gammu/static/Office-calendar-modified.png
